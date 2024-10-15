@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import QuizList from './component/QuizList';
 import QuizDetails from './component/QuizDetails';
 import Register from './component/Register';
-import LoginComp from './component/login';
+import LoginComp from './component/Login';
 
 
 function App() {

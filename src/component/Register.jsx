@@ -45,14 +45,14 @@ const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await registerUser({ name, email, password });
       alert('Registration successful! Redirecting to login...');
-      navigate('/login'); // Redirect to Login page
+      navigate('/login');
     } catch (error) {
       alert('Registration failed!');
     }
