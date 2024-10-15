@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes
-import Login from './component/login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Register from './component/Register';
 import QuizList from './component/QuizList';
 import QuizDetails from './component/QuizDetails';
+import Login from './component/login'
 
 
 function App() {
   return (
     <Router>
-      <Routes> {/* Wrap Route components in Routes */}
-        <Route path="/login" element={<Login />} /> {/* Use element prop for components */}
+      <Routes> 
+        <Route path="/login" element={<Login />} /> 
         <Route path="/" element={<Register />} />
         <Route path="/quizzes" element={<QuizList />} />
         <Route path="/quiz/:id" element={<QuizDetails />} />
