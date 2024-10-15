@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { loginUser } from '../services/authService';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 const Container = styled.div`
   display: flex;
@@ -41,17 +41,17 @@ const Button = styled.button`
   }
 `;
 
-const Login = () => {
+const LoginComp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const token = await loginUser({ email, password });
-      localStorage.setItem('token', token); // Store the JWT token
-      navigate('/quizzes'); // Redirect to quiz list page after login
+      localStorage.setItem('token', token); 
+      navigate('/quizzes'); 
     } catch (error) {
       alert('Login failed!');
     }
@@ -81,4 +81,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginComp;
