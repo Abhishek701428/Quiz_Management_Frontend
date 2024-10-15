@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+ "scripts": {
+  "dev": "npm run build && vite",
+  "build": "vite build",
+  "start": "npm run build && vite preview",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@emotion/styled": "^11.13.0",
     "axios": "^1.7.7",
